@@ -18,7 +18,7 @@ const Navbar = () => {
                           {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">MY TODO</a>
+                    <Link to='/' className="btn btn-ghost normal-case text-xl">MY TODO</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -26,7 +26,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn text-white bg-[#73BBC9]">Button</a>
+                    <Link to='/myTask' className="btn text-white bg-[#73BBC9]">Tusk</Link>
                 </div>
             </div>
         </div>
