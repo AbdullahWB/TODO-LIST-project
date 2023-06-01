@@ -22,11 +22,13 @@ const MyTask = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                toast.success('List deleted successfully')
                 const remaining = listData.filter(myData => myData._id !== id);
                 setListData(remaining)
-                toast.success('List deleted successfully')
             })
     }
+
+
 
     console.log(listData);
     return (
@@ -40,7 +42,7 @@ const MyTask = () => {
                             className='border-2 border-black w-full p-3 rounded-lg text-2xl text-center bg-gray-100 mt-10'
                         >
                             <div className='flex justify-between'>
-                                <Link to={`/details/${list._id}`}>
+                                <Link to={`/details/${list?._id}`}>
                                     <button className='btn'>
                                         {list?.title}
                                     </button>

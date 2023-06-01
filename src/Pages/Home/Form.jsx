@@ -31,7 +31,7 @@ const Form = () => {
                     <input className='p-4 rounded-lg' placeholder="Title" {...register("title", { required: true })} />
                     <input className='p-4 rounded-lg' placeholder="Status" {...register("status", { required: true })} />
                     <div className='grid grid-cols-2 gap-5'>
-                        <input className='p-4 rounded-lg' placeholder="Date" {...register("date", { required: true })} />
+                        <input className='p-4 rounded-lg' type='date' placeholder="Date" {...register("date", { required: true })} />
                         <input className='p-4 rounded-lg' placeholder="Time" {...register("time", { required: true })} />
                     </div>
                     <textarea className='p-4 rounded-lg' rows="2" cols="50" placeholder="description" {...register("description", { required: true })} />
