@@ -28,9 +28,9 @@ const MyTask = () => {
             })
     }
 
-
-
     console.log(listData);
+
+
     return (
         <>
             <div className='flex flex-col justify-center items-center h-[calc(100vh-70px)]'>
@@ -49,7 +49,7 @@ const MyTask = () => {
                                 </Link>
                                 <div className='flex gap-3'>
                                     <button onClick={() => handleDeleteItem(list?._id)} className='w-[35px] h-[35px] text-[18px] text-white bg-red-500 rounded-full flex justify-center items-center'><FaTrash></FaTrash></button>
-                                    <button className='w-[35px] h-[35px] text-[18px] text-white bg-green-500 rounded-full flex justify-center items-center'><FaPenAlt></FaPenAlt></button>
+                                    <Link to={`/update/${list?._id}`}  className='w-[35px] h-[35px] text-[18px] text-white bg-green-500 rounded-full flex justify-center items-center'><FaPenAlt></FaPenAlt></Link>
                                 </div>
                             </div>
                         </p>)

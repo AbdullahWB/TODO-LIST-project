@@ -3,6 +3,7 @@ import App from "../App";
 import Home from "../Pages/Home/Home";
 import MyTask from "../Pages/MyTask/MyTask";
 import Details from "../Pages/Details/Details";
+import Update from "../Pages/Update/Update";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
                 path: '/details/:id',
                 element: <Details />,
                 loader: ({ params }) => fetch(`http://localhost:3000/list/${params.id}`)
+            },
+            {
+                path: '/update/:id',
+                element: <Update />,
+                loader: ({params}) => fetch(`http://localhost:3000/list/${params.id}`)
             }
         ]
     }
