@@ -9,7 +9,7 @@ const Update = () => {
     const { title, time, status, description, date, _id } = update || {};
     
     const onSubmit = data => {
-        fetch(`http://localhost:3000/list/${_id}`, {
+        fetch(`https://task-management-server-smoky.vercel.app/list/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -7,7 +7,7 @@ const MyTask = () => {
     const [listData, setListData] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/list')
+        fetch('https://task-management-server-smoky.vercel.app/list')
             .then(res => res.json())
             .then(data => setListData(data))
             .catch(error => {
@@ -16,7 +16,7 @@ const MyTask = () => {
     }, [])
 
     const handleDeleteItem = id => {
-        fetch(`http://localhost:3000/list/${id}`, {
+        fetch(`https://task-management-server-smoky.vercel.app/list/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

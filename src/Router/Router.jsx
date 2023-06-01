@@ -21,12 +21,12 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <Details />,
-                loader: ({ params }) => fetch(`http://localhost:3000/list/${params.id}`)
+                loader: ({ params }) => fetch(`https://task-management-server-smoky.vercel.app/list/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <Update />,
-                loader: ({params}) => fetch(`http://localhost:3000/list/${params.id}`)
+                loader: ({params}) => fetch(`https://task-management-server-smoky.vercel.app/list/${params.id}`)
             }
         ]
     }

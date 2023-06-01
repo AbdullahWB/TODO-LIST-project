@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Form = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:3000/list', {
+        fetch('https://task-management-server-smoky.vercel.app/list', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
